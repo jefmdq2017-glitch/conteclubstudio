@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publicar Anuncio | ConteClub Studio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --bg-dark: #0f0f13;
+      --card-bg: #181820;
+      --accent-gold: #d4af37;
+      --accent-gold-hover: #f3ce56;
+      --text-main: #f0f0f0;
+      --text-muted: #a0a0b0;
+      --border-color: #2a2a38;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body { background-color: var(--bg-dark); color: var(--text-main); line-height: 1.6; padding-bottom: 50px; }
+    header { background-color: var(--card-bg); border-bottom: 1px solid var(--border-color); padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 1.5rem; font-weight: 700; color: var(--text-main); text-decoration: none; }
+    .logo span { color: var(--accent-gold); }
+    .btn-back { color: var(--text-muted); text-decoration: none; font-size: 0.95rem; }
+    .btn-back:hover { color: var(--accent-gold); }
+    .container { max-width: 1000px; margin: 3rem auto; padding: 0 1.5rem; }
+    .title-section { text-align: center; margin-bottom: 3rem; }
+    .title-section h1 { font-size: 2.2rem; color: var(--accent-gold); margin-bottom: 0.5rem; }
+    .title-section p { color: var(--text-muted); }
+    
+    .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 3rem; }
+    .price-card { background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; text-align: center; position: relative; display: flex; flex-direction: column; justify-content: space-between; }
+    .price-card.featured { border-color: var(--accent-gold); box-shadow: 0 0 20px rgba(212, 175, 55, 0.15); }
+    .badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--accent-gold); color: #000; font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; }
+    .price-title { font-size: 1.4rem; color: #fff; margin-bottom: 1rem; }
+    .price-amount { font-size: 2rem; color: var(--accent-gold); font-weight: 700; margin-bottom: 1.5rem; }
+    .price-features { list-style: none; color: var(--text-muted); text-align: left; margin-bottom: 2rem; font-size: 0.95rem; }
+    .price-features li { margin-bottom: 0.8rem; display: flex; align-items: center; gap: 8px; }
+    .price-features li i { color: var(--accent-gold); }
+    
+    .btn-plan { background-color: var(--accent-gold); color: #000; text-decoration: none; font-weight: 700; padding: 0.8rem; border-radius: 6px; display: block; transition: 0.3s; }
+    .btn-plan:hover { background-color: var(--accent-gold-hover); }
+
+    .payment-instructions { background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; }
+    .payment-instructions h2 { color: var(--accent-gold); margin-bottom: 1rem; font-size: 1.3rem; }
+    .steps-list { margin-left: 1.2rem; color: var(--text-muted); }
+    .steps-list li { margin-bottom: 0.8rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">CONTECLUB<span>STUDIO</span></a>
+    <a href="index.html" class="btn-back"><i class="fas fa-arrow-left"></i> Volver al Catálogo</a>
+  </header>
+
+  <div class="container">
+    <div class="title-section">
+      <h1>Planes Publicitarios para Creadoras</h1>
+      <p>Aumentá la visibilidad de tu contenido digital y sumá suscriptores a tu canal oficial.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div>
+          <h3 class="price-title">Plan Estándar</h3>
+          <div class="price-amount">$ Tarifa Fija</div>
+          <ul class="price-features">
+            <li><i class="fas fa-check"></i> Publicación por 30 días</li>
+            <li><i class="fas fa-check"></i> Ficha con hasta 3 fotos</li>
+            <li><i class="fas fa-check"></i> Enlace directo a tu Telegram</li>
+            <li><i class="fas fa-check"></i> Insignia de Perfil Verificado</li>
+          </ul>
+        </div>
+        <a href="mailto:jefmdq2017@gmail.com?subject=Solicitud%20Plan%20Estandar" class="btn-plan">Solicitar Plan</a>
+      </div>
+
+      <div class="price-card featured">
+        <div class="badge">Más Popular</div>
+        <div>
+          <h3 class="price-title">Plan Premium Destacado</h3>
+          <div class="price-amount">$ Tarifa Fija</div>
+          <ul class="price-features">
+            <li><i class="fas fa-check"></i> Ubicación preferencial al inicio</li>
+            <li><i class="fas fa-check"></i> Publicación por 30 días</li>
+            <li><i class="fas fa-check"></i> Ficha con galería destacada</li>
+            <li><i class="fas fa-check"></i> Marco dorado y etiqueta VIP</li>
+            <li><i class="fas fa-check"></i> Enlace directo a Telegram / Web</li>
+          </ul>
+        </div>
+        <a href="mailto:jefmdq2017@gmail.com?subject=Solicitud%20Plan%20Premium" class="btn-plan">Solicitar Plan Premium</a>
+      </div>
+    </div>
+
+    <div class="payment-instructions">
+      <h2>Proceso de Alta y Publicación (Paso a Paso)</h2>
+      <ol class="steps-list">
+        <li><strong>Paso 1:</strong> Elegí el plan publicitario que mejor se adapte a tus necesidades.</li>
+        <li><strong>Paso 2:</strong> Solicitá los datos de pago enviando un correo a <strong>jefmdq2017@gmail.com</strong>.</li>
+        <li><strong>Paso 3:</strong> Una vez acreditado el pago, recibirás el enlace privado y exclusivo para completar tu ficha publicitaria y subir tu documentación de verificación KYC (+18).</li>
+        <li><strong>Paso 4:</strong> Tu perfil será revisado y publicado en la plataforma en menos de 24 horas.</li>
+      </ol>
+    </div>
+  </div>
+</body>
+</html>

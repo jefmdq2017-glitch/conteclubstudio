@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ConteClub Studio - Catálogo Oficial de Creadoras Digitales</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            darkBg: '#080C14',
+                            cardBg: '#121826',
+                            accent: '#EC4899',
+                            glow: '#8B5CF6'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #080C14;
+            color: #F1F5F9;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .font-display {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .glass-header {
+            background: rgba(8, 12, 20, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .glass-card {
+            background: linear-gradient(180deg, rgba(18, 24, 38, 0.9) 0%, rgba(13, 17, 28, 0.95) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(236, 72, 153, 0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px -10px rgba(236, 72, 153, 0.15);
+        }
+
+        .verified-badge {
+            background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+            box-shadow: 0 0 10px rgba(16, 185, 129, 0.3);
+        }
+
+        .glow-button {
+            background: linear-gradient(135deg, #EC4899 0%, #8B5CF6 100%);
+            box-shadow: 0 4px 20px rgba(236, 72, 153, 0.35);
+            transition: all 0.3s ease;
+        }
+
+        .glow-button:hover {
+            box-shadow: 0 6px 25px rgba(236, 72, 153, 0.55);
+            transform: translateY(-1px);
+        }
+
+        .telegram-btn {
+            background: linear-gradient(135deg, #229ED9 0%, #1D88BC 100%);
+            box-shadow: 0 4px 15px rgba(34, 158, 217, 0.3);
+        }
+
+        .telegram-btn:hover {
+            box-shadow: 0 6px 20px rgba(34, 158, 217, 0.5);
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #080C14;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1F293D;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-40 glass-header w-full">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-pink-500 to-purple-600 flex items-center justify-center font-bold text-white text-xl shadow-lg shadow-pink-500/30">
+                    C
+                </div>
+                <div>
+                    <span class="font-display font-bold text-xl tracking-tight text-white block leading-none">
+                        CONTE<span class="text-pink-500">CLUB</span>
+                    </span>
+                    <span class="text-[10px] text-slate-400 font-medium tracking-widest uppercase">Digital Content Directory</span>
+                </div>
+            </a>
+
+            <div class="flex items-center gap-3 sm:gap-4">
+                <a href="publicar.html" class="glow-button px-4 py-2.5 sm:px-5 sm:py-2.5 rounded-xl text-xs sm:text-sm font-semibold text-white flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                    </svg>
+                    <span>Publicá tu Perfil</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        
+        <!-- Hero Title -->
+        <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-pink-500/10 border border-pink-500/20 text-pink-400 text-xs font-semibold uppercase tracking-wider mb-4">
+                <span class="w-2 h-2 rounded-full bg-pink-500 animate-ping"></span>
+                Plataforma Oficial de Verificación Digital
+            </span>
+            <h1 class="font-display text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
+                Descubrí Creadoras de <span class="bg-gradient-to-r from-pink-500 via-purple-400 to-indigo-400 bg-clip-text text-transparent">Contenido Exclusivo</span>
+            </h1>
+            <p class="mt-4 text-slate-400 text-sm sm:text-base leading-relaxed">
+                Directorio verificado de artistas digitales, cosplayers, modelos de fotografía y creadoras de contenido. Suscripciones directas, packs y canales VIP.
+            </p>
+        </div>
+
+        <!-- Search and Filters -->
+        <div class="bg-brand-cardBg/80 p-4 sm:p-6 rounded-2xl border border-white/5 mb-10 shadow-xl backdrop-blur-md">
+            <div class="flex flex-col md:flex-row gap-4 items-center justify-between">
+                
+                <div class="relative w-full md:w-80">
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        onkeyup="filterCreators()" 
+                        placeholder="Buscar por nombre o nick..." 
+                        class="w-full bg-slate-900/90 text-slate-200 text-sm rounded-xl px-4 py-3 pl-10 border border-white/10 focus:outline-none focus:border-pink-500/50 transition-colors"
+                    >
+                    <svg class="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                    </svg>
+                </div>
+
+                <div class="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 scrollbar-none">
+                    <button onclick="setCategory('all')" class="cat-btn active-cat border border-pink-500/40 bg-pink-500/20 text-pink-300 text-xs font-semibold px-4 py-2.5 rounded-xl whitespace-nowrap transition-all">
+                        Todas
+                    </button>
+                    <button onclick="setCategory('fotografia')" class="cat-btn border border-white/5 bg-slate-900/80 text-slate-400 hover:text-white hover:bg-slate-800 text-xs font-semibold px-4 py-2.5 rounded-xl whitespace-nowrap transition-all">
+                        📸 Fotografía Artística
+                    </button>
+                    <button onclick="setCategory('cosplay')" class="cat-btn border border-white/5 bg-slate-900/80 text-slate-400 hover:text-white hover:bg-slate-800 text-xs font-semibold px-4 py-2.5 rounded-xl whitespace-nowrap transition-all">
+                        🎮 Cosplay & Gaming
+                    </button>
+                    <button onclick="setCategory('fitness')" class="cat-btn border border-white/5 bg-slate-900/80 text-slate-400 hover:text-white hover:bg-slate-800 text-xs font-semibold px-4 py-2.5 rounded-xl whitespace-nowrap transition-all">
+                        💪 Fitness
+                    </button>
+                    <button onclick="setCategory('vip')" class="cat-btn border border-white/5 bg-slate-900/80 text-slate-400 hover:text-white hover:bg-slate-800 text-xs font-semibold px-4 py-2.5 rounded-xl whitespace-nowrap transition-all">
+                        ⭐ Canales VIP
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Grid Cards -->
+        <div id="creatorsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            
+            <!-- Card 1 -->
+            <div class="creator-card glass-card rounded-2xl overflow-hidden flex flex-col justify-between" data-category="fotografia" data-name="valeria vargas valevicreative">
+                <div>
+                    <div class="relative w-full aspect-[4/5] overflow-hidden group">
+                        <img 
+                            src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" 
+                            alt="Valeria Vargas" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        >
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+                        
+                        <div class="absolute top-3 left-3 right-3 flex items-center justify-between">
+                            <span class="verified-badge text-white text-[11px] font-bold px-2.5 py-1 rounded-full flex items-center gap-1">
+                                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                KYC 18+ VERIFICADA
+                            </span>
+                            <span class="bg-black/60 backdrop-blur-md text-amber-400 border border-amber-500/30 text-[10px] font-semibold px-2 py-1 rounded-lg">
+                                ⭐ TOP CREATOR
+                            </span>
+                        </div>
+
+                        <div class="absolute bottom-3 left-3 right-3">
+                            <span class="text-xs font-semibold text-pink-400 uppercase tracking-wider block mb-0.5">Fotografía Artística</span>
+                            <h2 class="font-display text-xl font-bold text-white">Valeria Vargas</h2>
+                            <p class="text-xs text-slate-300">@valevicreative</p>
+                        </div>
+                    </div>
+
+                    <div class="p-4 space-y-3">
+                        <p class="text-slate-300 text-xs leading-relaxed line-clamp-2">
+                            Sesiones fotográficas conceptuales, sets digitales exclusivos y acceso a contenido semanal para miembros VIP.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-1.5">
+                            <span class="text-[11px] bg-slate-900/80 text-slate-300 border border-white/5 px-2.5 py-1 rounded-md">
+                                📸 Photo Book
+                            </span>
+                            <span class="text-[11px] bg-slate-900/80 text-slate-300 border border-white/5 px-2.5 py-1 rounded-md">
+                                💬 Canal Telegram
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-4 pt-0">
+                    <button onclick="openProfileModal('Valeria Vargas', '@valevicreative', 'Fotografía Artística', 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80', 'Fotógrafa y modelo digital enfocada en producciones de estética visual y moda. Accedé a mis sets exclusivos en alta resolución.', 'https://t.me/')" class="w-full py-2.5 px-4 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-white font-medium text-xs flex items-center justify-center gap-2 border border-white/10 transition-all">
+                        <span>Ver Ficha Completa</span>
+                        <svg class="w-3.5 h-3.5 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="creator-card glass-card rounded-2xl overflow-hidden flex flex-col justify-between" data-category="cosplay" data-name="sofia mendoza sofiacosplay">
+                <div>
+                    <div class="relative w-full aspect-[4/5] overflow-hidden group">
+                        <img 
+                            src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80" 
+                            alt="Sofía Mendoza" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        >
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+                        
+                        <div class="absolute top-3 left-3 right-3 flex items-center justify-between">
+                            <span class="verified-badge text-white text-[11px] font-bold px-2.5 py-1 rounded-full flex items-center gap-1">
+                                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                KYC 18+ VERIFICADA
+                            </span>
+                        </div>
+
+                        <div class="absolute bottom-3 left-3 right-3">
+                            <span class="text-xs font-semibold text-purple-400 uppercase tracking-wider block mb-0.5">Cosplay & Gaming</span>
+                            <h2 class="font-display text-xl font-bold text-white">Sofía Mendoza</h2>
+                            <p class="text-xs text-slate-300">@sofiacosplay</p>
+                        </div>
+                    </div>
+
+                    <div class="p-4 space-y-3">
+                        <p class="text-slate-300 text-xs leading-relaxed line-clamp-2">
+                            Cosmaker y Creadora Geek. Sets fotográficos temáticos de anime, cómics y videojuegos.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-1.5">
+                            <span class="text-[11px] bg-slate-900/80 text-slate-300 border border-white/5 px-2.5 py-1 rounded-md">
+                                🎭 Cosplay Sets
+                            </span>
+                            <span class="text-[11px] bg-slate-900/80 text-slate-300 border border-white/5 px-2.5 py-1 rounded-md">
+                                📸 Photoshoots
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-4 pt-0">
+                    <button onclick="openProfileModal('Sofía Mendoza', '@sofiacosplay', 'Cosplay & Gaming', 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80', 'Diseño mis propios trajes temáticos. Suscribite a mi canal privado para galerías exclusivas.', 'https://t.me/')" class="w-full py-2.5 px-4 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-white font-medium text-xs flex items-center justify-center gap-2 border border-white/10 transition-all">
+                        <span>Ver Ficha Completa</span>
+                        <svg class="w-3.5 h-3.5 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="creator-card glass-card rounded-2xl overflow-hidden flex flex-col justify-between" data-category="fitness" data-name="camila roldan camifit">
+                <div>
+                    <div class="relative w-full aspect-[4/5] overflow-hidden group">
+                        <img 
+                            src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80" 
+                            alt="Camila Roldán" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        >
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+                        
+                        <div class="absolute top-3 left-3 right-3 flex items-center justify-between">
+                            <span class="verified-badge text-white text-[11px] font-bold px-2.5 py-1 rounded-full flex items-center gap-1">
+                                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                KYC 18+ VERIFICADA
+                            </span>
+                        </div>
+
+                        <div class="absolute bottom-3 left-3 right-3">
+                            <span class="text-xs font-semibold text-emerald-400 uppercase tracking-wider block mb-0.5">Fitness & Lifestyle</span>
+                            <h2 class="font-display text-xl font-bold text-white">Camila Roldán</h2>
+                            <p class="text-xs text-slate-300">@camifit_digital</p>
+                        </div>
+                    </div>
+
+                    <div class="p-4 space-y-3">
+                        <p class="text-slate-300 text-xs leading-relaxed line-clamp-2">
+                            Rutinas personalizadas, guías nutricionales y contenido exclusivo para miembros.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-1.5">
+                            <span class="text-[11px] bg-slate-900/80 text-slate-300 border border-white/5 px-2.5 py-1 rounded-md">
+                                🏋️ Rutinas VIP
+                            </span>
+                            <span class="text-[11px] bg-slate-900/80 text-slate-300 border border-white/5 px-2.5 py-1 rounded-md">
+                                🥗 Nutrición
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-4 pt-0">
+                    <button onclick="openProfileModal('Camila Roldán', '@camifit_digital', 'Fitness & Lifestyle', 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80', 'Atleta fitness y entrenadora. Comparto programas de entrenamiento y contenido exclusivo.', 'https://t.me/')" class="w-full py-2.5 px-4 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-white font-medium text-xs flex items-center justify-center gap-2 border border-white/10 transition-all">
+                        <span>Ver Ficha Completa</span>
+                        <svg class="w-3.5 h-3.5 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Banner Creator -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full">
+        <div class="relative rounded-3xl overflow-hidden bg-gradient-to-r from-pink-900/30 via-purple-900/30 to-slate-900 border border-pink-500/20 p-8 sm:p-10 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="max-w-xl space-y-2">
+                <span class="text-xs font-bold uppercase tracking-widest text-pink-400">¿Sos creadora de contenido?</span>
+                <h3 class="font-display text-2xl font-bold text-white">Monetizá tu canal y tus packs digitales</h3>
+                <p class="text-slate-300 text-xs sm:text-sm">
+                    Sumate al directorio oficial verificado. Proceso de validación seguro y sin comisiones abusivas.
+                </p>
+            </div>
+            <a href="publicar.html" class="glow-button px-6 py-3 rounded-2xl text-xs sm:text-sm font-bold text-white whitespace-nowrap">
+                Ver Planes y Publicar
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black/80 border-t border-white/5 py-10 w-full mt-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+                <div class="flex items-center gap-2">
+                    <div class="w-7 h-7 rounded-lg bg-pink-500 flex items-center justify-center font-bold text-white text-sm">C</div>
+                    <span class="font-display font-bold text-lg text-white">CONTECLUB STUDIO</span>
+                </div>
+                <div class="flex flex-wrap justify-center gap-6 text-xs text-slate-400">
+                    <a href="terminos.html" class="hover:text-pink-400 transition-colors">Términos y Condiciones</a>
+                    <a href="terminos.html#privacidad" class="hover:text-pink-400 transition-colors">Política KYC</a>
+                    <a href="publicar.html" class="hover:text-pink-400 transition-colors">Planes Publicitarios</a>
+                </div>
+            </div>
+
+            <hr class="border-white/5">
+
+            <div class="text-center text-[11px] text-slate-500 leading-relaxed max-w-4xl mx-auto space-y-2">
+                <p>
+                    <strong>Aviso Legal y Restricción 18+:</strong> ConteClub actúa exclusivamente como medio de difusión publicitaria para creadoras de contenido digital independientes (fotografía, cosplay, arte, fitness y redes sociales). Queda terminantemente prohibido publicar contenido no autorizado o anunciar servicios presenciales.
+                </p>
+                <p>
+                    Todos los perfiles enlistados son mayores de 18 años y han verificado su identidad mediante acreditación de documento oficial (KYC).
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Profile Modal -->
+    <div id="profileModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="bg-brand-cardBg border border-white/10 w-full max-w-md rounded-3xl overflow-hidden shadow-2xl relative">
+            <button onclick="closeProfileModal()" class="absolute top-4 right-4 z-20 w-8 h-8 bg-black/60 text-white rounded-full flex items-center justify-center hover:bg-slate-800 transition-colors">
+                ✕
+            </button>
+
+            <div class="relative w-full h-64 overflow-hidden">
+                <img id="modalImg" src="" alt="Creator" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-cardBg via-transparent to-transparent"></div>
+            </div>
+
+            <div class="p-6 -mt-10 relative z-10 space-y-4">
+                <div>
+                    <span id="modalCat" class="text-xs font-bold text-pink-400 uppercase tracking-wider block mb-1">Categoría</span>
+                    <h3 id="modalName" class="font-display text-2xl font-bold text-white">Nombre Creadora</h3>
+                    <p id="modalNick" class="text-xs text-slate-400">@nick_digital</p>
+                </div>
+
+                <p id="modalBio" class="text-slate-300 text-xs leading-relaxed bg-slate-900/80 p-3.5 rounded-xl border border-white/5">
+                    Descripción del perfil...
+                </p>
+
+                <div class="pt-2">
+                    <a id="modalTelegramBtn" href="#" target="_blank" rel="noopener noreferrer" class="telegram-btn w-full py-3 px-4 rounded-xl text-white font-semibold flex items-center justify-center gap-2 text-xs">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                            <path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.56 8.16l-2.03 9.56c-.15.68-.55.84-1.12.52l-3.1-2.28-1.5 1.44c-.17.17-.31.31-.63.31l.22-3.17 5.77-5.21c.25-.22-.05-.35-.39-.12l-7.14 4.49-3.08-.96c-.67-.21-.68-.67.14-.99l12.02-4.63c.56-.21 1.05.13.84.85z"/>
+                        </svg>
+                        Acceder al Canal VIP / Contacto Telegram
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function setCategory(cat) {
+            const buttons = document.querySelectorAll('.cat-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('active-cat', 'border-pink-500/40', 'bg-pink-500/20', 'text-pink-300');
+                btn.classList.add('border-white/5', 'bg-slate-900/80', 'text-slate-400');
+            });
+
+            event.currentTarget.classList.add('active-cat', 'border-pink-500/40', 'bg-pink-500/20', 'text-pink-300');
+            event.currentTarget.classList.remove('border-white/5', 'bg-slate-900/80', 'text-slate-400');
+
+            const cards = document.querySelectorAll('.creator-card');
+            cards.forEach(card => {
+                if (cat === 'all' || card.dataset.category === cat) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function filterCreators() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const cards = document.querySelectorAll('.creator-card');
+            cards.forEach(card => {
+                const nameData = card.dataset.name.toLowerCase();
+                if (nameData.includes(query)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function openProfileModal(name, nick, cat, img, bio, telegram) {
+            document.getElementById('modalName').innerText = name;
+            document.getElementById('modalNick').innerText = nick;
+            document.getElementById('modalCat').innerText = cat;
+            document.getElementById('modalImg').src = img;
+            document.getElementById('modalBio').innerText = bio;
+            document.getElementById('modalTelegramBtn').href = telegram;
+            document.getElementById('profileModal').classList.remove('hidden');
+        }
+
+        function closeProfileModal() {
+            document.getElementById('profileModal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
