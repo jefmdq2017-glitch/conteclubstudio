@@ -54,7 +54,7 @@
       <p class="subtitle">Completá tus datos públicos y subí la documentación de verificación obligatoria (+18).</p>
 
       <!-- Reemplazar el ACTION con tu endpoint de Formspree o servicio de formularios -->
-     <form action="https://formspree.io/f/jefmdq2017@gmail.com" method="POST" enctype="multipart/form-data">
+    <form id="registroForm" enctype="multipart/form-data">
    
        <h2>1. Datos Públicos del Anuncio</h2>
         <br>
@@ -108,5 +108,27 @@
       </form>
     </div>
   </div>
+  <script>
+document.getElementById('registroForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const formData = new FormData(this);
+  
+  try {
+    const response = await fetch('/enviar', {
+      method: 'POST',
+      body: formData
+    });
+    const result = await response.json();
+    if (result.success) {
+      alert('¡Registro enviado con éxito!');
+      this.reset();
+    } else {
+      alert('Hubo un error al enviar: ' + (result.error || 'Desconocido'));
+    }
+  } catch (error) {
+    alert('Error de conexión al enviar el formulario.');
+  }
+});
+</script>
 </body>
 </html>
